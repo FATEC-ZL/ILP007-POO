@@ -68,7 +68,6 @@ public final class Agenda implements ActionListener{
 		Agenda a = new Agenda();
 	}
 
-	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
