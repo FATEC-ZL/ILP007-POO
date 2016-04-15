@@ -1,7 +1,7 @@
-package Observer;
+package observer;
 
 public class Teste {
-	
+
 	public static void main(String[] args) {
 		Pessoa joao = new Pessoa("Joao Silva");
 		Pessoa maria = new Pessoa("Maria Antonieta");
@@ -14,11 +14,12 @@ public class Teste {
 		
 		correioBrasiliense.removeSubscriber( maria );
 		
-		correioBrasiliense.notificarTodos("Donald Trumph perde as eleições...");
+		correioBrasiliense.notificarTodos("Donald Trumph perde as eleiÃ§Ãµes...");
 		
 		correioBrasiliense.addSubscriber( maria );
 		
-		correioBrasiliense.notificarTodos("Profissões em TI tem alta valorização no mercado");
+		correioBrasiliense.notificarTodos("ProfissÄ±es em TI tem alta valorizaÃ§Ã£o no mercado");
 
 	}
+
 }

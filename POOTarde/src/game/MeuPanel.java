@@ -1,4 +1,4 @@
-package controller;
+package game;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -39,7 +39,6 @@ public class MeuPanel extends JPanel implements KeyListener{
 		}
 	}
 
-	@Override
 	public void keyPressed(KeyEvent e) {
 		if(e.getKeyChar()=='w'){
 			barra.y -= 30;
@@ -48,13 +47,11 @@ public class MeuPanel extends JPanel implements KeyListener{
 		}
 	}
 
-	@Override
 	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub
 		
