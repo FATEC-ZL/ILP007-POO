@@ -1,9 +1,12 @@
 package edu.fatec;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 
-public class Agenda {
+public final class Agenda implements ActionListener{
 	
 	private JFrame janela = new JFrame("Agenda de Contatos");
 	private JTextField txtNome = new JTextField( 50 );
@@ -48,16 +51,35 @@ public class Agenda {
 		panPrincipal.add( panForm, BorderLayout.CENTER );
 		panPrincipal.add( panBotoes, BorderLayout.SOUTH );
 		
-		Desenho ovo = new Desenho();
-		panPrincipal.add(ovo, BorderLayout.CENTER);
+		//Desenho ovo = new Desenho();
+		//panPrincipal.add(ovo, BorderLayout.CENTER);
 		janela.setContentPane( panPrincipal );
 		
 		janela.setSize( 640, 240 );
 		janela.setVisible( true );
 		janela.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+		
+		//CodigoTeste ct = new CodigoTeste();
+		//btnAdicionar.addActionListener(ct);
+		btnAdicionar.addActionListener(this);
 	}
 
 	public static void main(String[] args) {
 		Agenda a = new Agenda();
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+		String cmd = e.getActionCommand();
+		
+		if("Adicionar".equals(cmd)){
+			System.out.println("Registro adicionado com sucesso: " + txtNome);
+		} else if ("Remover".equals(cmd)) {
+			System.out.println("Registro removido com sucesso: " + txtNome);
+		} else if ("Pesquisar".equals(cmd)) {
+			System.out.println("Registro Pesquisado com sucesso: " + txtNome);
+		}
 	}
 }
